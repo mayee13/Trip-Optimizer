@@ -1,7 +1,6 @@
 from .client import amadeus
 from amadeus import ResponseError
 
-# Search for flights on a specific day
 def search_flights_day(origin, dest, date):
     date = date.strftime("%Y-%m-%d")
     try:
@@ -18,7 +17,6 @@ def search_flights_day(origin, dest, date):
         print(f"Flight search error {origin}->{dest} on {date}: {e}")
         return []
 
-# Search for flights within a date range
 def search_flights_days_range(origin, dest, start_date, end_date):
     try:
         response = amadeus.shopping.flight_dates.get(

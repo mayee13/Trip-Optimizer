@@ -1,6 +1,7 @@
 from .client import amadeus
 from amadeus import ResponseError
 
+# NOTE: this function does not work
 # Search for trains on a specific day
 def search_trains_day(origin, dest, date):
     try:

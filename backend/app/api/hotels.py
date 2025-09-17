@@ -1,6 +1,7 @@
 from .client import amadeus
 from amadeus import ResponseError
 
+# NOTE: This function does not work, may need to switch to another API. 
 def search_hotels(city_code, check_in_date, check_out_date):
     check_in_date = check_in_date.strftime("%Y-%m-%d")
     check_out_date = check_out_date.strftime("%Y-%m-%d")

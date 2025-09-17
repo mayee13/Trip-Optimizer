@@ -16,7 +16,9 @@ def get_distance(origin, destination):
             (origin_loc.latitude, origin_loc.longitude),
             (dest_loc.latitude, dest_loc.longitude)
         ).km
+
         print(f"Distance from {origin} to {destination}: {distance_km:.2f} km")
+        
         return {
             "origin": origin,
             "destination": destination,

@@ -12,7 +12,7 @@ GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 START_DATE = "2025-10-01"
 END_DATE   = "2025-10-15"
 
-# Example trips
+# Testing trips
 trips = {
     "Trip1": {
         "cities": ["Seattle", "London", "Paris", "Brussels", "Amsterdam"],

@@ -1,7 +1,7 @@
 import sys
-# from fastapi import FastAPI
 from app.config import trips, START_DATE, END_DATE
 from app.services.data_load import search_trip
+# from fastapi import FastAPI
 
 # app = FastAPI()
 
@@ -41,4 +41,4 @@ if __name__ == "__main__":
     from app.optimizer import optimal_time
     print("Calculating optimal time and route...")
     best_start_date, best_route, best_cost = optimal_time(START_DATE, END_DATE, cities, cities[0], nights)
-    print(f"Optimal start date: {best_start_date}, route: {best_route}, cost: {best_cost}")
+    print(f"Optimal start date: {best_start_date}, route: {best_route}, cost: {round(best_cost, 2)}")

@@ -133,7 +133,7 @@ def load_hotel_prices(cities, start_date=START_DATE, end_date=END_DATE):
 def search_trip(cities, start_date=START_DATE, end_date=END_DATE):
     start_date = pd.to_datetime(start_date)
     end_date = pd.to_datetime(end_date)
-    # load_dist_matrix(cities)
-    # load_flight_prices(cities, start_date, end_date)
-    load_hotel_prices(cities, start_date, end_date)
+    load_dist_matrix(cities)
+    load_flight_prices(cities, start_date, end_date)
+    # load_hotel_prices(cities, start_date, end_date)
     return {"status": "Data load complete"}
