@@ -111,7 +111,7 @@ def optimal_time(start_time_window, end_time_window, cities, origin, nights):
     city_to_index = {city: n for city, n in zip(cities, nights)}
     trip_length = sum(nights)
     best_route = route
-    for i in range((end_time_window - start_time_window).days - trip_length + 1):
+    for i in range((end_time_window - start_time_window).days - trip_length):
         print(f"Evaluating start date: {(start_time_window + timedelta(days=i)).strftime('%Y-%m-%d')}")
         curr_cost = 0
         start_date = (start_time_window + timedelta(days=i))
@@ -149,6 +149,7 @@ def optimal_time(start_time_window, end_time_window, cities, origin, nights):
                 print(f"No flight found for {city} to {route[idx+1]} on {to_date.date()}")
                 curr_cost = float('inf')
                 break
+            curr_date = to_date
             
             # for night in range(stay_nights):
             #     curr_date = start_date + timedelta(days=night)
